@@ -1,0 +1,10 @@
+PhysScore = int(input('Enter your Physic grade:'))
+# print('Hello, ' + PhysScore)
+ChemScore = int(input('Enter your Chem grade:'))
+# print('Hello, ' + ChemScore)
+
+def funcAverageScore(PhysScore,ChemScore):
+    Total = PhysScore + ChemScore
+    print(Total)
+    
+funcAverageScore(PhysScore,ChemScore)
