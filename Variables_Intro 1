@@ -1,0 +1,19 @@
+print("Welcomes to variables lesson")
+print("Here are different versions of variable")
+print("There is integer II which are numbers")
+print("We show them as a = 10  ")
+
+print("There are also string. ")
+print("name = Jeevan Labh")
+print("You can join two strings together (concatenate) by adding them")
+print("It would look like this ")
+Fname = 'jeevan'
+Lname= "Labh"
+concantenate_String = Fname + Lname 
+print("Here is our concanenated string   "+ concantenate_String)
+
+
+
+
+
+
