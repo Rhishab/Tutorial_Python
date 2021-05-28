@@ -1,0 +1,24 @@
+class Student :
+    def __init__(self,name,age,grade,teachers,subjects):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        self.teachers= teachers
+        self.subjects= subjects
+
+    def grade_class(self):
+        print("I am of grade")
+        print(self.grade)   
+         
+    def teacher(self):
+        print(self.name + "'s teacher is " + self.teachers)
+
+    def subject(self):
+        print(self.name + " Has Subject" + self.subject)   
+
+
+
+s1 = Student("Rhishab",18,12,"Mona", "Physics")
+print(s1.name)
+print(s1.age)
+s1.teacher()
