@@ -1,0 +1,28 @@
+a = 3
+b = 9
+sum = a + b
+diff= b-a
+multiply = a * b
+divide = b/a 
+
+print("SUM ")
+print(sum)
+
+print("Diff")
+print(diff)
+
+print("Multiply")
+print(multiply)
+
+print("Divide")
+print(divide)
+
+
+
+ab = float(3.6)
+xy = float(2.4)
+
+print(ab + xy)
+
+
+ 
