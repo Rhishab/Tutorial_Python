@@ -1,0 +1,7 @@
+i = 1
+while i < 6:
+  print(i)
+  i=i + 1 
+
+# the only difference between for loop and while loop is that variable (which is used as loop reference) is incremented at the end in while loop but 
+# for loop automatically increments after the loop code line has ended
