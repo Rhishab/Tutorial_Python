@@ -1,0 +1,12 @@
+def funcPassword_Check ():
+    password = input("Enter password ")
+    length= len(password)
+    while length <7:
+        password = input("Enter password Again ")
+        length= len(password)
+    print("Strong password ")    
+        
+   
+
+funcPassword_Check()
+    
