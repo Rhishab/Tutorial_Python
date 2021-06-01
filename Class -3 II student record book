@@ -1,0 +1,30 @@
+
+
+
+
+
+
+class Student : 
+    def __init__(self,name,age,roll_num,Avg_gpa,sex,grade):
+        self.name = name
+        self.age = age
+        self.roll_num = roll_num
+        self.Avg_gpa = Avg_gpa
+        self.sex = sex
+        self.grade = grade
+        
+    def funcStudent_Info(self):
+        print(self.name +" "+ self.age + " "+ self.roll_num)
+    
+    def func_SexMale(self):
+        if self.sex == "M" :
+            return True
+    
+
+s1 = Student("Jeevan", "18", "1232", "3.7", "M", "12")
+s1.funcStudent_Info()
+
+        
+        
+    
+    
