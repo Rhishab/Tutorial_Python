@@ -1,3 +1,8 @@
+Objectiive : 
+1.  make additional place for parent variables - mom and dad 
+2. MAke a fucntion to print mom and dad within the class
+3. function that gives a grade based on gpa : 3.5 > A II 3.8 > A+ 
+4. if - statemnt(outside the class) IF grade is < B - print("Call your parents)
 
 
 
