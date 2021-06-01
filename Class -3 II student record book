@@ -7,27 +7,31 @@ Objectiive :
 
 
 
-
-
 class Student : 
-    def __init__(self,name,age,roll_num,Avg_gpa,sex,grade):
+    def __init__(self,name,age,Avg_gpa,sex,Dad, Mom):
         self.name = name
-        self.age = age
-        self.roll_num = roll_num
+        self.age = age      
         self.Avg_gpa = Avg_gpa
         self.sex = sex
-        self.grade = grade
+        self.Dad = Dad 
+        self.Mom = Mom 
+     
         
     def funcStudent_Info(self):
-        print(self.name +" "+ self.age + " "+ self.roll_num)
+        print(self.name +" "+ self.age)
+
+    def func_Parent(self):
+        print("Parent " + self.Dad + " " + self.Mom)    
     
     def func_SexMale(self):
         if self.sex == "M" :
             return True
     
 
-s1 = Student("Jeevan", "18", "1232", "3.7", "M", "12")
+s1 = Student("Jeevan", "18", "3.7", "M","Padre", "Madre") 
 s1.funcStudent_Info()
+s1.func_Parent()
+
 
         
         
