@@ -6,7 +6,6 @@ Objectiive :
 
 
 
-
 class Student : 
     def __init__(self,name,age,Avg_gpa,sex,Dad, Mom):
         self.name = name
@@ -23,14 +22,29 @@ class Student :
     def func_Parent(self):
         print("Parent " + self.Dad + " " + self.Mom)    
     
-    def func_SexMale(self):
-        if self.sex == "M" :
-            return True
+    def func_grade(self):
+        if self.Avg_gpa > 3.7 :
+            gradeS =("A+")
+        elif self.Avg_gpa > 3.4:
+             gradeS = ("A")
+        elif self.Avg_gpa>3 :
+            gradeS = ("B")
+        elif self.Avg_gpa>2.5:
+            gradeS = ("C")
+        else:
+            gradeS = ("FAIL")    
+        return gradeS            
+
     
 
-s1 = Student("Jeevan", "18", "3.7", "M","Padre", "Madre") 
+s1 = Student("Jeevan", "18", float(1.7), "M","Padre", "Madre") 
 s1.funcStudent_Info()
 s1.func_Parent()
+s1.func_grade()
+
+if s1.func_grade() == "FAIL" : 
+    print("Call Your parents ")
+
 
 
         
