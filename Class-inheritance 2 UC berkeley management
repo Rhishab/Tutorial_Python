@@ -1,1 +1,98 @@
+____________UC Berkeley__________
+
+Aim : catagorize staff 
+
+STaff : 
+either : professor II enter lab, get lab equi,  access teacher room 
+either : Reserchers II enter lab , access llab equip
+either : phd Student II enter lab  
+either : janitor / cleaning staff : can enter lab
+
+Psuedocode : 
+
+Clasess Staff():       # Parent CLass
+bool Enter_lab = FAlSE
+name
+id_num
+depatment
+salery 
+
+Children Classess 
+
+1. Professor : inherit Staff  II tenure(bool) ,current Research
+2. Researcher : current Research
+3. phd_Student : grades ()
+
+
+CODE : 
+class STAFF : 
+    def __init__(self,name,id_num,department,salary):
+        self.name = name 
+        self.id_num = id_num 
+        self.department = department 
+        self.salary = salary
+
+class Professor (STAFF):
+    def __init__(self,name,id_num,department,salary, tenure):
+        super().__init__(name,id_num,department,salary)
+        self.tenure = tenure  
+
+    def id(self):
+         print("Name : " + self.name )
+         print("Id Num:" + self.id_num)
+         print("departmet" + self.department)
+         print("Salary" + str(self.salary))
+         
+         
+
+class Researher(STAFF) : 
+    def __init__(self,name,id_num,department,salary, cur_research):
+             super().__init__(name,id_num,department,salary)
+             self.cur_research = cur_research
+    def id(self) :
+        print("Name : " + self.name )
+        print("Id Num:" + self.id_num)
+        print("departmet" + self.department)
+        print("Salary" + self.salary)
+        print("Research " + self.cur_research)
+
+        
+class phd_Student(STAFF):
+    def __init__(self,name,id_num,department,salary, grades):
+             super().__init__(name,id_num,department,salary)
+             self.grades = grades
+    def id(self):
+        print("Name : " + self.name )
+        print("Id Num:" + self.id_num)
+        print("departmet" + self.department)
+        print("Salary" + self.salary)
+        print("Grades :" + self.grades)
+                       
+
+
+print("_______Hello Welcome to the ID protector_______")
+print("enter 1 for professor. Enter 2 for Researcher. Enter 3 for Phd_Student")
+choice = input("Enter your choice ")
+if choice == "1":
+    p1 = Professor("Eric Lander" , "1231", "Philoshsophy", 400000, True)
+    p1.id()
+elif choice == "2":
+    r1 = Researher("Lex Fridman","1232","Artificial Inteligence",300000,"Visual motion and AI predictions")
+    r1.id()
+elif choice == "3":
+    phd1 = phd_Student("Rhishab","121","Mechanical Engineering",40000,"3.84")
+    phd1.id()       
+else : 
+    print("Invalid Input ")     
+
+
+
+
+
+
+
+
+
+
+
 
