@@ -1,0 +1,74 @@
+CLassess List :  (Parent)
+1. Central control (CPU)
+   a. input to start  
+   b. turn off and on head light
+   c. turn off and on wiper II if so how many srcond internal (5 sec or 15 sec)
+ 
+2. Combustion engine (Child)
+   a. once it receive input from (CPU) it turns on func ignite
+   b. ignite () : tells the petrol to be released in cobustion tank/sec
+                      - input amount of petrol
+                  tells air to be taken in combustion tank/sec
+                      - inout volum of air in (dm-3)
+                  turns on spark plug 
+                  Input gearII depending on gear 
+               Formula : amount of petrol and air relseaded * gear
+
+3. motors 
+   a. def func movement(amoun of petrol , amount of air)
+               velocity = (amount of petrol * amoun of air)/100
+   b. speed_checker ()
+                if velocity > 100 than print("Too high")
+
+
+CODE : 
+class CPU :
+    def __init__(self,start_Car,Lights, wiper,wiper_speed):
+        self.start_Car = start_Car
+        self.Lights = Lights
+        self.wiper = wiper
+        self.wiper_speed = wiper_speed
+
+    def start_command(self):
+        if self.start_Car == True:
+            print("Car shall be turnt")
+                # put cpmbustion engine function here
+        elif self.start_Car == False:
+            print("Car off then ")        
+
+    def wiper(self):
+        if self.wiper == True :
+            self.wiper_speed = input("What is wiper time interval per swipe")
+            print("Wiper on " + str(self.wiper_speed) + " sec per interval")
+        elif self.wiper == False:
+            print("Wiper OFF")
+
+    def light(self):
+        if self.light == True:
+            print("lights on")
+        elif self.light == False:
+            print("Lights OFF")                
+
+
+class combustion_Engine (CPU):
+    def __init__(self,start_Car,Lights, wiper,wiper_speed,amtPetrol,amtAir,gear):
+             super().__init__(start_Car,Lights, wiper,wiper_speed)
+             self.amtPetrol = int(amtPetrol)
+             self.amtAir = int(amtAir)
+             self.gear = int(gear)
+            
+    def ignite(self):
+        self.amtPetrol = input("Enter Amount of petrol to  be entered per sec")
+        self.amtAir = input("Enter number of Air to be taken in ")
+        self.gear = input("Which is the current gear ")
+        self.amtPetrol = self.amtPetrol * self.gear
+        print(self.amtPetrol)
+        
+
+
+
+c1 = combustion_Engine(True,True,True, 10,1000,500,3)
+c1.ignite
+
+
+
