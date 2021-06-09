@@ -66,10 +66,33 @@ class combustion_Engine (CPU):
         print("Amt of Air used (currently): "+str(self.amtAir))
         
 
+class Motors(CPU) :
+    def __init__(self,start_Car,Lights, wiper,wiper_speed,amtPetrol,amtAir,velocity):
+        super().__init__(start_Car,Lights, wiper,wiper_speed)
+        self.amtPetrol = amtPetrol
+        self.amtAir = amtAir
+        self.velocity = velocity
+    def func_Movement(self):
+        self.amtPetrol = int(input("Enter Amount of petrol to  be entered per sec"))
+        self.amtAir = int(input("Enter number of Air to be taken in "))
+        self.velocity = (self.amtAir + self.amtPetrol)/100
+        print(self.velocity)
+    def speed_Checker (self):
+        if self.velocity > 100 :
+            print("Too HIGH")
+        else : 
+            print("All good")    
+        
 
 
-c1 = combustion_Engine(True,True,True, 10,1000,500,3)
-c1.ignite()
+
+# c1 = combustion_Engine(True,True,, 10,1000,500,3)
+# c1.ignite()
+
+c2 = Motors(True,True, 10,1000,500,3,0)
+c2.func_Movement()
+c2.speed_Checker()
+
 
 
 
